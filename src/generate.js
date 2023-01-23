@@ -1,7 +1,9 @@
+import * as dotenv from "dotenv";
+dotenv.config();
 import { Configuration, OpenAIApi } from "openai";
 const configuration = new Configuration({
-  organization: "org-aUhn7ePhlxIjEKjGUXG1iIuF",
-  apiKey: "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",
+  organization: process.env.OPENAI_ORG_ID,
+  apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 // const response = await openai.listEngines();
