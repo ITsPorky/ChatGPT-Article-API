@@ -6,7 +6,6 @@ const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
-// const response = await openai.listEngines();
 
 // OpenAI Calls
 export default async function (req, res) {
@@ -59,5 +58,5 @@ export default async function (req, res) {
 }
 
 function generatePrompt(prompt) {
-  return `Write a kotaku styled article about ${prompt}:`;
+  return `Write a kotaku style article about ${prompt}:`;
 }
